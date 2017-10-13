@@ -9,6 +9,10 @@ class simpleapp_tk(tkinter.Tk):
     def initialize(self):
         self.grid()
 
+        self.entry = tkinter.Entry(self)
+        self.entry.grid(column=0,row=0,sticky='EW')
+        self.entry.bind("<Return>", self.OnPressEnter)
+
         button = tkinter.Button(self,text=u"Click me !", command = self.OnButtonClick)
         button.grid(column=1,row=0)
 
